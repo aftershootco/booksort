@@ -6,7 +6,9 @@ resources:
     idle_minutes: 2
     down: true
 
-workdir: https://github.com/jaidevd/booksort.git
+workdir:
+  url: https://github.com/aftershootco/booksort.git
+  ref: main
 
 name: booksort-train
 
