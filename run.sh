@@ -4,7 +4,6 @@
 
 set -ex
 
-pip install poetry
-poetry install
+uv sync
 
-poetry run python train.py --overwrite-dataset
+uv run python train.py --overwrite-dataset
