@@ -13,6 +13,10 @@ workdir:
 name: booksort-train
 
 setup: |
+  printenv
+  which python
+  which uv
+  which pip
   # python -m pip install poetry
   # poetry install
   bash ./run.sh
@@ -20,5 +24,4 @@ setup: |
 # Typical use: make use of resources, such as running training.
 # Invoked under the workdir (i.e., can use its files).
 run: |
-  # poetry run python train.py --overwrite-dataset
   bash ./run.sh

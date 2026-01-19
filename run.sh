@@ -3,7 +3,8 @@
 #
 
 set -ex
-printenv
-which python
-which uv
-which pip
+
+pip install poetry
+poetry install
+
+poetry run python train.py --overwrite-dataset
