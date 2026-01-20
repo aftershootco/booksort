@@ -6,10 +6,6 @@ resources:
     idle_minutes: 2
     hook: |
       echo "Running post hook."
-      for i in {1..50}; do
-        echo "Iteration $i"
-        sleep 1
-      done
     hook_timeout: 7200  # 2 hours in seconds
 
 workdir:
