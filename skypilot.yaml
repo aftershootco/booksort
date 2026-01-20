@@ -3,8 +3,14 @@ resources:
   cpus: 1+
   memory: 4+
   autostop:
-    idle_minutes: 2
-    down: true
+    idle_minutes: 10
+    hook: |
+      echo "Running post hook."
+      for i in {1..50}; do
+        echo "Iteration $i"
+        sleep 1
+      done
+    hook_timeout: 7200  # 2 hours in seconds
 
 workdir:
   url: https://github.com/aftershootco/booksort.git
