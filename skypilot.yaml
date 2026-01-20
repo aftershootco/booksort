@@ -3,7 +3,7 @@ resources:
   cpus: 1+
   memory: 4+
   autostop:
-    idle_minutes: 1
+    idle_minutes: 2
     hook: |
       echo "Running post hook."
       for i in {1..50}; do
