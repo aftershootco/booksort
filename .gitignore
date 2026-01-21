@@ -10,3 +10,4 @@ runs/
 book_detections/
 book_highlights/
 books_cache/*
+.DS_Store
