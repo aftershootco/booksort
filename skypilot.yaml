@@ -1,5 +1,5 @@
 resources:
-  image_id: projects/stage/global/images/debian-12-bookworm-v20260114
+  image_id: projects/debian-cloud/global/images/debian-12-bookworm-v20260114
   cloud: gcp
   cpus: 1+
   memory: 4+
