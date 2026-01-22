@@ -18,4 +18,4 @@ runs:
         echo "UV_NO_SYNC=1" >> $GITHUB_ENV
         echo "UV_HTTP_TIMEOUT=120" >> $GITHUB_ENV
         uv venv --seed
-        uv pip install skypilot
+        uv pip install skypilot-nightly
