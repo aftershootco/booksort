@@ -1,8 +1,8 @@
 resources:
-  image_id: projects/debian-cloud/global/images/debian-12-bookworm-v20260114
+  image_id: projects/aftershoot-stage/global/images/skypilot-base-image
   cloud: gcp
-  cpus: 1+
-  memory: 4+
+  cpus: 2+
+  memory: 8+
   autostop:
     idle_minutes: 2
     down: true
