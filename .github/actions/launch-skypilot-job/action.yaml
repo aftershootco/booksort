@@ -14,6 +14,9 @@ inputs:
   skypilot_service_account_token:
     description: "SkyPilot service account token"
     required: true
+  git_token:
+    description: "Git Token for private repo authentication"
+    required: true
 
 outputs:
   launch_output:
@@ -49,6 +52,8 @@ runs:
         if [ -n "${{ inputs.job_name }}" ]; then
           LAUNCH_ARGS+=( "--name=${{ inputs.job_name }}" )
         fi
+
+        export GIT_TOKEN="${{ inputs.git_token }}"
 
         # Capture the output
         LAUNCH_OUTPUT=$(sky jobs launch ${{ inputs.task_yaml_path }} -y --async "${LAUNCH_ARGS[@]}" 2>&1)

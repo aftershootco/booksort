@@ -93,6 +93,7 @@ jobs:
           job_name: ${{ steps.generate_job_name.outputs.job_name }}
           skypilot_api_url: ${{ secrets.SKYPILOT_API_URL }}
           skypilot_service_account_token: ${{ secrets.SKYPILOT_SERVICE_ACCOUNT_TOKEN }}
+          git_token: ${{ secrets.GH_PAT_READ_REPO }}
 
       - name: Extract SkyPilot Request ID
         id: extract_request_id
@@ -162,7 +163,7 @@ jobs:
           BRANCH="main"
 
           curl -sSf \
-            -H "Authorization: Bearer ${{ secrets.AFTERSHOOT_INFRA_REPO_READ_TOKEN }}" \
+            -H "Authorization: Bearer ${{ secrets.GH_PAT_READ_REPO }}" \
             -H "Accept: application/vnd.github+json" \
             "https://api.github.com/repos/$OWNER/$REPO/contents/$FILE_PATH?ref=$BRANCH" \
             | jq -r '.content' \
